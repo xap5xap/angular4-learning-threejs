@@ -5,9 +5,11 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { Chapter1Component } from './chapter1/chapter1.component';
+import { ControlGuiComponent } from './chapter1/control-gui.component';
+
 
 const appRoutes: Routes = [
-  { path: 'chapter1', component: Chapter1Component },
+  { path: 'chapter1', component: ControlGuiComponent },
   { path: '',
     redirectTo: '/chapter1',
     pathMatch: 'full'
@@ -17,7 +19,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    Chapter1Component
+    Chapter1Component,
+    ControlGuiComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
