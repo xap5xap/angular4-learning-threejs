@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { Chapter1Component } from './chapter1/chapter1.component';
 import { ControlGuiComponent } from './chapter1/control-gui.component';
 import { ScreenSizeComponent } from './chapter1/screen-size';
+import { Chapter2Component } from './chapter2/chapter2.component';
 
 
 const appRoutes: Routes = [
   { path: 'chapter1', component: ScreenSizeComponent },
+  { path: 'chapter2', component: Chapter2Component },
   { path: '',
-    redirectTo: '/chapter1',
+    redirectTo: '/chapter2',
     pathMatch: 'full'
   }
 ];
@@ -22,7 +24,8 @@ const appRoutes: Routes = [
     AppComponent,
     Chapter1Component,
     ControlGuiComponent,
-    ScreenSizeComponent
+    ScreenSizeComponent,
+    Chapter2Component
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
