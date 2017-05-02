@@ -8,11 +8,12 @@ import { Chapter1Component } from './chapter1/chapter1.component';
 import { ControlGuiComponent } from './chapter1/control-gui.component';
 import { ScreenSizeComponent } from './chapter1/screen-size';
 import { Chapter2Component } from './chapter2/chapter2.component';
+import { FoggySceneComponent } from './chapter2/foggy-scene.component';
 
 
 const appRoutes: Routes = [
   { path: 'chapter1', component: ScreenSizeComponent },
-  { path: 'chapter2', component: Chapter2Component },
+  { path: 'chapter2', component: FoggySceneComponent },
   { path: '',
     redirectTo: '/chapter2',
     pathMatch: 'full'
@@ -25,7 +26,8 @@ const appRoutes: Routes = [
     Chapter1Component,
     ControlGuiComponent,
     ScreenSizeComponent,
-    Chapter2Component
+    Chapter2Component,
+    FoggySceneComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
