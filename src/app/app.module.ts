@@ -6,10 +6,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { Chapter1Component } from './chapter1/chapter1.component';
 import { ControlGuiComponent } from './chapter1/control-gui.component';
+import { ScreenSizeComponent } from './chapter1/screen-size';
 
 
 const appRoutes: Routes = [
-  { path: 'chapter1', component: ControlGuiComponent },
+  { path: 'chapter1', component: ScreenSizeComponent },
   { path: '',
     redirectTo: '/chapter1',
     pathMatch: 'full'
@@ -20,7 +21,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     Chapter1Component,
-    ControlGuiComponent
+    ControlGuiComponent,
+    ScreenSizeComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
