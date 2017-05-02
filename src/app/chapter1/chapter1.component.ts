@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import * as THREE from 'three';
+// import * as THREE from 'three';
+declare var THREE: any;
 
 declare var Stats: any;
 

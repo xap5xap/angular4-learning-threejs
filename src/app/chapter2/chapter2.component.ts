@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import * as THREE from 'three';
+// import * as THREE from 'three';
 
 declare var Stats: any;
 declare var dat: any;
+declare var THREE: any;
 
 @Component({
   selector: 'app-chapter2',

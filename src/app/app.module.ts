@@ -10,11 +10,12 @@ import { ScreenSizeComponent } from './chapter1/screen-size';
 import { Chapter2Component } from './chapter2/chapter2.component';
 import { FoggySceneComponent } from './chapter2/foggy-scene.component';
 import { ForcedMaterialsComponent } from './chapter2/forced-materials.component';
+import { GeometriesComponent } from './chapter2/geometries.component';
 
 
 const appRoutes: Routes = [
   { path: 'chapter1', component: ScreenSizeComponent },
-  { path: 'chapter2', component: ForcedMaterialsComponent },
+  { path: 'chapter2', component: GeometriesComponent },
   { path: '',
     redirectTo: '/chapter2',
     pathMatch: 'full'
@@ -29,7 +30,8 @@ const appRoutes: Routes = [
     ScreenSizeComponent,
     Chapter2Component,
     FoggySceneComponent,
-    ForcedMaterialsComponent
+    ForcedMaterialsComponent,
+    GeometriesComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
