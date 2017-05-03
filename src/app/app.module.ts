@@ -18,12 +18,13 @@ import { CameraLookAtComponent } from './chapter2/camera-lookat.component';
 import { Chapter3Component } from './chapter3/chapter3.component';
 import { PointLightComponent } from './chapter3/point-light.component';
 import { SpotLightComponent } from './chapter3/spot-light.component';
+import { DirectionalLightComponent } from './chapter3/directional-light.component';
 
 
 const appRoutes: Routes = [
   { path: 'chapter1', component: ScreenSizeComponent },
   { path: 'chapter2', component: CameraLookAtComponent },
-  { path: 'chapter3', component: SpotLightComponent },
+  { path: 'chapter3', component: DirectionalLightComponent },
   { path: '',
     redirectTo: '/chapter3',
     pathMatch: 'full'
@@ -46,7 +47,8 @@ const appRoutes: Routes = [
     CameraLookAtComponent,
     Chapter3Component,
     PointLightComponent,
-    SpotLightComponent
+    SpotLightComponent,
+    DirectionalLightComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
