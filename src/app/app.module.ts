@@ -25,13 +25,15 @@ import { LensFlareComponent } from './chapter3/lens-flare.component';
 import { Chapter4Component } from './chapter4/chapter4.component';
 import { DepthMaterialComponent } from './chapter4/depth-material.component';
 import { CombinedMaterialComponent } from './chapter4/combined-material.component';
+import { MeshNormalMaterialComponent } from './chapter4/mesh-normal-material.component';
+
 
 
 const appRoutes: Routes = [
   { path: 'chapter1', component: ScreenSizeComponent },
   { path: 'chapter2', component: CameraLookAtComponent },
   { path: 'chapter3', component: LensFlareComponent },
-  { path: 'chapter4', component: CombinedMaterialComponent },
+  { path: 'chapter4', component: MeshNormalMaterialComponent },
   { path: '',
     redirectTo: '/chapter4',
     pathMatch: 'full'
@@ -41,6 +43,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    MeshNormalMaterialComponent,
     CombinedMaterialComponent,
     Chapter1Component,
     ControlGuiComponent,
