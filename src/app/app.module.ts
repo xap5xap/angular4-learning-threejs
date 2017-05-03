@@ -14,11 +14,12 @@ import { GeometriesComponent } from './chapter2/geometries.component';
 import { CustomGeometriesComponent } from './chapter2/custom-geometry.component';
 import { MeshPropertiesComponent } from './chapter2/mesh-properties.component';
 import { BothCamerasComponent } from './chapter2/both-cameras.component';
+import { CameraLookAtComponent } from './chapter2/camera-lookat.component';
 
 
 const appRoutes: Routes = [
   { path: 'chapter1', component: ScreenSizeComponent },
-  { path: 'chapter2', component: BothCamerasComponent },
+  { path: 'chapter2', component: CameraLookAtComponent },
   { path: '',
     redirectTo: '/chapter2',
     pathMatch: 'full'
@@ -37,7 +38,8 @@ const appRoutes: Routes = [
     GeometriesComponent,
     CustomGeometriesComponent,
     MeshPropertiesComponent,
-    BothCamerasComponent
+    BothCamerasComponent,
+    CameraLookAtComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
