@@ -23,13 +23,14 @@ import { HemisphereLightComponent } from './chapter3/hemisphere-light.component'
 import { AreaLightComponent } from './chapter3/area-light.component';
 import { LensFlareComponent } from './chapter3/lens-flare.component';
 import { Chapter4Component } from './chapter4/chapter4.component';
+import { DepthMaterialComponent } from './chapter4/depth-material.component';
 
 
 const appRoutes: Routes = [
   { path: 'chapter1', component: ScreenSizeComponent },
   { path: 'chapter2', component: CameraLookAtComponent },
   { path: 'chapter3', component: LensFlareComponent },
-  { path: 'chapter4', component: Chapter4Component },
+  { path: 'chapter4', component: DepthMaterialComponent },
   { path: '',
     redirectTo: '/chapter4',
     pathMatch: 'full'
@@ -57,7 +58,8 @@ const appRoutes: Routes = [
     HemisphereLightComponent,
     AreaLightComponent,
     LensFlareComponent,
-    Chapter4Component
+    Chapter4Component,
+    DepthMaterialComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
