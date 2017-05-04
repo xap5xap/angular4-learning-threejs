@@ -30,13 +30,14 @@ import { MeshFaceMaterialComponent } from './chapter4/mesh-face-material.compone
 import { MeshLambertMaterialComponent } from './chapter4/mesh-lambert-material.component';
 import { MeshPongMaterialComponent } from './chapter4/mesh-pong-material.component';
 import { LineMaterialComponent } from './chapter4/line-material.component';
+import { LineMaterialDashComponent } from './chapter4/line-material-dash.component';
 
 
 const appRoutes: Routes = [
   { path: 'chapter1', component: ScreenSizeComponent },
   { path: 'chapter2', component: CameraLookAtComponent },
   { path: 'chapter3', component: LensFlareComponent },
-  { path: 'chapter4', component: LineMaterialComponent },
+  { path: 'chapter4', component: LineMaterialDashComponent },
   { path: '',
     redirectTo: '/chapter4',
     pathMatch: 'full'
@@ -46,6 +47,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    LineMaterialDashComponent,
     MeshFaceMaterialComponent,
     LineMaterialComponent,
     MeshPongMaterialComponent,
