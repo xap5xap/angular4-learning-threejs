@@ -31,15 +31,26 @@ import { MeshLambertMaterialComponent } from './chapter4/mesh-lambert-material.c
 import { MeshPongMaterialComponent } from './chapter4/mesh-pong-material.component';
 import { LineMaterialComponent } from './chapter4/line-material.component';
 import { LineMaterialDashComponent } from './chapter4/line-material-dash.component';
-
+import { Chapter5Component } from './chapter5/chapter5.component';
+import { CircleGeometryComponent } from './chapter5/circle-geometry.component';
+import { RingGeometryComponent } from './chapter5/ring-geometry.component';
+import { ShapeGeometryComponent } from './chapter5/shape-geometry.component';
+import { CubeGeometryComponent } from './chapter5/cube-geometry.component';
+import { SphereGeometryComponent } from './chapter5/sphere-geometry.component';
+import { CilinderGeometryComponent } from './chapter5/cilinder-geometry.component';
+import { TorusGeometryComponent } from './chapter5/torus-geometry.component';
+import { TorusKnotGeometryComponent } from './chapter5/torusknot-geometry.component';
+import { PolyGeometryComponent } from './chapter5/ploy-geometry.component';
 
 const appRoutes: Routes = [
   { path: 'chapter1', component: ScreenSizeComponent },
   { path: 'chapter2', component: CameraLookAtComponent },
   { path: 'chapter3', component: LensFlareComponent },
   { path: 'chapter4', component: LineMaterialDashComponent },
-  { path: '',
-    redirectTo: '/chapter4',
+  { path: 'chapter5', component: PolyGeometryComponent },
+  {
+    path: '',
+    redirectTo: '/chapter5',
     pathMatch: 'full'
   }
 ];
@@ -47,6 +58,15 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    PolyGeometryComponent,
+    TorusKnotGeometryComponent,
+    TorusGeometryComponent,
+    CilinderGeometryComponent,
+    SphereGeometryComponent,
+    CubeGeometryComponent,
+    ShapeGeometryComponent,
+    RingGeometryComponent,
+    CircleGeometryComponent,
     LineMaterialDashComponent,
     MeshFaceMaterialComponent,
     LineMaterialComponent,
@@ -73,7 +93,8 @@ const appRoutes: Routes = [
     AreaLightComponent,
     LensFlareComponent,
     Chapter4Component,
-    DepthMaterialComponent
+    DepthMaterialComponent,
+    Chapter5Component
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
