@@ -41,6 +41,12 @@ import { CilinderGeometryComponent } from './chapter5/cilinder-geometry.componen
 import { TorusGeometryComponent } from './chapter5/torus-geometry.component';
 import { TorusKnotGeometryComponent } from './chapter5/torusknot-geometry.component';
 import { PolyGeometryComponent } from './chapter5/ploy-geometry.component';
+import { Chapter6Component } from './chapter6/chapter6.component';
+import { LatheGeometryComponent } from './chapter6/lathe-geometry.component';
+import { ExtrudeGeometryComponent } from './chapter6/extrude-geometry.component';
+import { ExtrudeTubeComponent } from './chapter6/extrude-tube.component';
+import { ParametricGeometryComponent } from './chapter6/parametric-geometry.component';
+import { TextGeometryComponent } from './chapter6/text-geometry.component';
 
 const appRoutes: Routes = [
   { path: 'chapter1', component: ScreenSizeComponent },
@@ -48,9 +54,10 @@ const appRoutes: Routes = [
   { path: 'chapter3', component: LensFlareComponent },
   { path: 'chapter4', component: LineMaterialDashComponent },
   { path: 'chapter5', component: PolyGeometryComponent },
+  { path: 'chapter6', component: TextGeometryComponent },
   {
     path: '',
-    redirectTo: '/chapter5',
+    redirectTo: '/chapter6',
     pathMatch: 'full'
   }
 ];
@@ -58,7 +65,12 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    TextGeometryComponent,
+    ExtrudeTubeComponent,
+    ParametricGeometryComponent,
     PolyGeometryComponent,
+    ExtrudeGeometryComponent,
+    LatheGeometryComponent,
     TorusKnotGeometryComponent,
     TorusGeometryComponent,
     CilinderGeometryComponent,
@@ -94,7 +106,8 @@ const appRoutes: Routes = [
     LensFlareComponent,
     Chapter4Component,
     DepthMaterialComponent,
-    Chapter5Component
+    Chapter5Component,
+    Chapter6Component
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
