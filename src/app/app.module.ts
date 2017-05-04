@@ -28,14 +28,14 @@ import { CombinedMaterialComponent } from './chapter4/combined-material.componen
 import { MeshNormalMaterialComponent } from './chapter4/mesh-normal-material.component';
 import { MeshFaceMaterialComponent } from './chapter4/mesh-face-material.component';
 import { MeshLambertMaterialComponent } from './chapter4/mesh-lambert-material.component';
-
+import { MeshPongMaterialComponent } from './chapter4/mesh-pong-material.component';
 
 
 const appRoutes: Routes = [
   { path: 'chapter1', component: ScreenSizeComponent },
   { path: 'chapter2', component: CameraLookAtComponent },
   { path: 'chapter3', component: LensFlareComponent },
-  { path: 'chapter4', component: MeshLambertMaterialComponent },
+  { path: 'chapter4', component: MeshPongMaterialComponent },
   { path: '',
     redirectTo: '/chapter4',
     pathMatch: 'full'
@@ -46,6 +46,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     MeshFaceMaterialComponent,
+    MeshPongMaterialComponent,
     MeshLambertMaterialComponent,
     MeshNormalMaterialComponent,
     CombinedMaterialComponent,
