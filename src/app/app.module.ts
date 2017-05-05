@@ -57,6 +57,19 @@ import { SnowySceneComponent } from './chapter7/snowy-scene.component';
 import { SpritesComponent } from './chapter7/sprites.component';
 import { Sprites3DComponent } from './chapter7/sprites-3d.component';
 import { CreateParticleComponent } from './chapter7/create-particle.component';
+import { Chapter8Component } from './chapter8/chapter8.component';
+import { MerginComponent } from './chapter8/merging.component';
+import { LoadObjectComponent } from './chapter8/03-load-save-json-object.component';
+import { LoadSceneComponent } from './chapter8/04-load-save-json-scene.component';
+import { BlenderComponent } from './chapter8/05-blender-from-json.component';
+import { LoadObjComponent } from './chapter8/06-load-obj.component';
+import { LoadMtlComponent } from './chapter8/07-load-obj-mtl.component';
+import { LoadColladaComponent } from './chapter8/08-load-collada.component';
+import { LoadSTLComponent } from './chapter8/09-load-stl.component';
+import { LoadCTMComponent } from './chapter8/10-load-ctm.component';
+import { LoadVKTComponent } from './chapter8/11-load-vtk.component';
+import { LoadPDBComponent } from './chapter8/12-load-pdb.component';
+import { LoadPYLComponent } from './chapter8/13-load-PLY.component';
 
 const appRoutes: Routes = [
   { path: 'chapter1', component: ScreenSizeComponent },
@@ -66,9 +79,10 @@ const appRoutes: Routes = [
   { path: 'chapter5', component: PolyGeometryComponent },
   { path: 'chapter6', component: TextGeometryComponent },
   { path: 'chapter7', component: CreateParticleComponent },
+  { path: 'chapter8', component: LoadPYLComponent },
   {
     path: '',
-    redirectTo: '/chapter7',
+    redirectTo: '/chapter8',
     pathMatch: 'full'
   }
 ];
@@ -76,6 +90,18 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    LoadPDBComponent,
+    LoadPYLComponent,
+    LoadCTMComponent,
+    LoadVKTComponent,
+    LoadSTLComponent,
+    LoadColladaComponent,
+    LoadMtlComponent,
+    LoadObjComponent,
+    BlenderComponent,
+    LoadSceneComponent,
+    LoadObjectComponent,
+    MerginComponent,
     CreateParticleComponent,
     Sprites3DComponent,
     SpritesComponent,
@@ -128,7 +154,8 @@ const appRoutes: Routes = [
     DepthMaterialComponent,
     Chapter5Component,
     Chapter6Component,
-    Chapter7Component
+    Chapter7Component,
+    Chapter8Component
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
