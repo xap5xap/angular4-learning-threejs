@@ -70,6 +70,21 @@ import { LoadCTMComponent } from './chapter8/10-load-ctm.component';
 import { LoadVKTComponent } from './chapter8/11-load-vtk.component';
 import { LoadPDBComponent } from './chapter8/12-load-pdb.component';
 import { LoadPYLComponent } from './chapter8/13-load-PLY.component';
+import { Chapter9Component } from './chapter9/chapter9.component';
+import { SelectingObjectsComponent } from './chapter9/02-selecting-objects.component';
+import { TweenComponent } from './chapter9/03-animation-tween.component';
+import { TrackballComponent } from './chapter9/04-trackball-controls-camera.component';
+import { FlyControlsComponent } from './chapter9/05-fly-controls-camera.component';
+import { RollControlsComponent } from './chapter9/06-roll-controls-camera.component';
+import { FirstPersonControlsComponent } from './chapter9/07-first-person-camera.component';
+import { OrbitControlsComponent } from './chapter9/08-controls-orbit.component';
+import { MorphComponent } from './chapter9/10-morph-targets.component';
+import { MorphManualComponent } from './chapter9/11-morph-targets-manually.component';
+import { BonesManualComponent } from './chapter9/12-bones-manually.component';
+import { BlenderAnimationComponent } from './chapter9/13-animation-from-blender.component';
+import { ColladaAnimationComponent } from './chapter9/14-animation-from-collada.component';
+import { Md2AnimationComponent } from './chapter9/15-animation-from-md2.component';
+import { GLTFAnimationComponent } from './chapter9/16-animation-from-gltf.component';
 
 const appRoutes: Routes = [
   { path: 'chapter1', component: ScreenSizeComponent },
@@ -80,9 +95,10 @@ const appRoutes: Routes = [
   { path: 'chapter6', component: TextGeometryComponent },
   { path: 'chapter7', component: CreateParticleComponent },
   { path: 'chapter8', component: LoadPYLComponent },
+  { path: 'chapter9', component: GLTFAnimationComponent },
   {
     path: '',
-    redirectTo: '/chapter8',
+    redirectTo: '/chapter9',
     pathMatch: 'full'
   }
 ];
@@ -90,6 +106,20 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    GLTFAnimationComponent,
+    Md2AnimationComponent,
+    ColladaAnimationComponent,
+    BlenderAnimationComponent,
+    BonesManualComponent,
+    MorphManualComponent,
+    MorphComponent,
+    OrbitControlsComponent,
+    FirstPersonControlsComponent,
+    RollControlsComponent,
+    FlyControlsComponent,
+    TrackballComponent,
+    TweenComponent,
+    SelectingObjectsComponent,
     LoadPDBComponent,
     LoadPYLComponent,
     LoadCTMComponent,
@@ -155,7 +185,8 @@ const appRoutes: Routes = [
     Chapter5Component,
     Chapter6Component,
     Chapter7Component,
-    Chapter8Component
+    Chapter8Component,
+    Chapter9Component
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
