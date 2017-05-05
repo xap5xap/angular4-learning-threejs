@@ -85,6 +85,17 @@ import { BlenderAnimationComponent } from './chapter9/13-animation-from-blender.
 import { ColladaAnimationComponent } from './chapter9/14-animation-from-collada.component';
 import { Md2AnimationComponent } from './chapter9/15-animation-from-md2.component';
 import { GLTFAnimationComponent } from './chapter9/16-animation-from-gltf.component';
+import { Chapter10Component } from './chapter10/chapter10.component';
+import { BasicDDSComponent } from './chapter10/01-basic-texture-dds.component';
+import { BumpMapComponent } from './chapter10/02-bump-map.component';
+import { NormalMapComponent } from './chapter10/03-normal-map.component';
+import { LightMapComponent } from './chapter10/04-light-map.component';
+import { EnvMapComponent } from './chapter10/05-env-map-dynamic.component';
+import { EnvMapStaticComponent } from './chapter10/05-env-map-static.component';
+import { SpeculiarComponent } from './chapter10/06-specular-map.component';
+import { UVMappingComponent } from './chapter10/07-uv-mapping.component';
+import { UVMappingManualComponent } from './chapter10/07-uv-mapping-manual.component';
+import { WrapComponent } from './chapter10/08-repeat-wrapping.component';
 
 const appRoutes: Routes = [
   { path: 'chapter1', component: ScreenSizeComponent },
@@ -96,9 +107,10 @@ const appRoutes: Routes = [
   { path: 'chapter7', component: CreateParticleComponent },
   { path: 'chapter8', component: LoadPYLComponent },
   { path: 'chapter9', component: GLTFAnimationComponent },
+  { path: 'chapter10', component: WrapComponent },
   {
     path: '',
-    redirectTo: '/chapter9',
+    redirectTo: '/chapter10',
     pathMatch: 'full'
   }
 ];
@@ -106,6 +118,15 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    WrapComponent,
+    UVMappingManualComponent,
+    UVMappingComponent,
+    SpeculiarComponent,
+    EnvMapStaticComponent,
+    EnvMapComponent,
+    LightMapComponent,
+    NormalMapComponent,
+    BumpMapComponent,
     GLTFAnimationComponent,
     Md2AnimationComponent,
     ColladaAnimationComponent,
@@ -186,7 +207,8 @@ const appRoutes: Routes = [
     Chapter6Component,
     Chapter7Component,
     Chapter8Component,
-    Chapter9Component
+    Chapter9Component,
+    Chapter10Component
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
