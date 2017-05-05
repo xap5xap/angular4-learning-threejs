@@ -47,6 +47,16 @@ import { ExtrudeGeometryComponent } from './chapter6/extrude-geometry.component'
 import { ExtrudeTubeComponent } from './chapter6/extrude-tube.component';
 import { ParametricGeometryComponent } from './chapter6/parametric-geometry.component';
 import { TextGeometryComponent } from './chapter6/text-geometry.component';
+import { Chapter7Component } from './chapter7/chapter7.component';
+import { ParticlesWebglComponent } from './chapter7/particles-webgl.component';
+import { BasicPointCloudComponent } from './chapter7/basic-point-cloud.component';
+import { ProgramBasedSpriteComponent } from './chapter7/program-based-sprite.component';
+import { ProgramBasedWebGlSpriteComponent } from './chapter7/program-based-sprites-webgl.component';
+import { RainySceneComponent } from './chapter7/rainy-scene.component';
+import { SnowySceneComponent } from './chapter7/snowy-scene.component';
+import { SpritesComponent } from './chapter7/sprites.component';
+import { Sprites3DComponent } from './chapter7/sprites-3d.component';
+import { CreateParticleComponent } from './chapter7/create-particle.component';
 
 const appRoutes: Routes = [
   { path: 'chapter1', component: ScreenSizeComponent },
@@ -55,9 +65,10 @@ const appRoutes: Routes = [
   { path: 'chapter4', component: LineMaterialDashComponent },
   { path: 'chapter5', component: PolyGeometryComponent },
   { path: 'chapter6', component: TextGeometryComponent },
+  { path: 'chapter7', component: CreateParticleComponent },
   {
     path: '',
-    redirectTo: '/chapter6',
+    redirectTo: '/chapter7',
     pathMatch: 'full'
   }
 ];
@@ -65,6 +76,15 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    CreateParticleComponent,
+    Sprites3DComponent,
+    SpritesComponent,
+    SnowySceneComponent,
+    RainySceneComponent,
+    ProgramBasedWebGlSpriteComponent,
+    ProgramBasedSpriteComponent,
+    BasicPointCloudComponent,
+    ParticlesWebglComponent,
     TextGeometryComponent,
     ExtrudeTubeComponent,
     ParametricGeometryComponent,
@@ -107,7 +127,8 @@ const appRoutes: Routes = [
     Chapter4Component,
     DepthMaterialComponent,
     Chapter5Component,
-    Chapter6Component
+    Chapter6Component,
+    Chapter7Component
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
