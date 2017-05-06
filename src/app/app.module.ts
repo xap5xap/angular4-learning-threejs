@@ -101,6 +101,9 @@ import { PostSimpleComponent } from './chapter11/02-post-processing-simple-passe
 import { GlitchComponent } from './chapter11/03-glitch-pass.component';
 import { MaskComponent } from './chapter11/03-post-processing-masks.component';
 import { ShaderSimpleComponent } from './chapter11/04-shaderpass-simple.component';
+import { Chapter12Component } from './chapter12/chapter12.component';
+import { MaterialPropertiesComponent } from './chapter12/02-material-properties.component';
+import { ShapesPhyComponent } from './chapter12/03-shapes.component';
 
 const appRoutes: Routes = [
   { path: 'chapter1', component: ScreenSizeComponent },
@@ -114,9 +117,10 @@ const appRoutes: Routes = [
   { path: 'chapter9', component: GLTFAnimationComponent },
   { path: 'chapter10', component: WrapComponent },
   { path: 'chapter11', component: ShaderSimpleComponent },
+  { path: 'chapter12', component: ShapesPhyComponent },
   {
     path: '',
-    redirectTo: '/chapter11',
+    redirectTo: '/chapter12',
     pathMatch: 'full'
   }
 ];
@@ -124,6 +128,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    ShapesPhyComponent,
+    MaterialPropertiesComponent,
     ShaderSimpleComponent,
     MaskComponent,
     GlitchComponent,
@@ -219,7 +225,8 @@ const appRoutes: Routes = [
     Chapter8Component,
     Chapter9Component,
     Chapter10Component,
-    Chapter11Component
+    Chapter11Component,
+    Chapter12Component
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
