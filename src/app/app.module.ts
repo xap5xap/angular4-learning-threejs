@@ -96,6 +96,11 @@ import { SpeculiarComponent } from './chapter10/06-specular-map.component';
 import { UVMappingComponent } from './chapter10/07-uv-mapping.component';
 import { UVMappingManualComponent } from './chapter10/07-uv-mapping-manual.component';
 import { WrapComponent } from './chapter10/08-repeat-wrapping.component';
+import { Chapter11Component } from './chapter11/chapter11.component';
+import { PostSimpleComponent } from './chapter11/02-post-processing-simple-passes.component';
+import { GlitchComponent } from './chapter11/03-glitch-pass.component';
+import { MaskComponent } from './chapter11/03-post-processing-masks.component';
+import { ShaderSimpleComponent } from './chapter11/04-shaderpass-simple.component';
 
 const appRoutes: Routes = [
   { path: 'chapter1', component: ScreenSizeComponent },
@@ -108,9 +113,10 @@ const appRoutes: Routes = [
   { path: 'chapter8', component: LoadPYLComponent },
   { path: 'chapter9', component: GLTFAnimationComponent },
   { path: 'chapter10', component: WrapComponent },
+  { path: 'chapter11', component: ShaderSimpleComponent },
   {
     path: '',
-    redirectTo: '/chapter10',
+    redirectTo: '/chapter11',
     pathMatch: 'full'
   }
 ];
@@ -118,6 +124,10 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    ShaderSimpleComponent,
+    MaskComponent,
+    GlitchComponent,
+    PostSimpleComponent,
     WrapComponent,
     UVMappingManualComponent,
     UVMappingComponent,
@@ -208,7 +218,8 @@ const appRoutes: Routes = [
     Chapter7Component,
     Chapter8Component,
     Chapter9Component,
-    Chapter10Component
+    Chapter10Component,
+    Chapter11Component
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
